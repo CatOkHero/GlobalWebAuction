@@ -1,0 +1,88 @@
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\bin\Debug\Infrastructure.dll.config
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\bin\Debug\Infrastructure.dll
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\bin\Debug\Infrastructure.pdb
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\bin\Debug\DomainModels.dll
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\bin\Debug\EntityFramework.dll
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\bin\Debug\DomainModels.pdb
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\bin\Debug\EntityFramework.xml
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\obj\Debug\Infrastructure.dll
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\obj\Debug\Infrastructure.pdb
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\bin\Debug\ApiModels.dll
+C:\Users\Роман\Desktop\PMAAuction\Infrastructure\bin\Debug\ApiModels.pdb
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Infrastructure.dll.config
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Infrastructure.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Infrastructure.pdb
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\DomainModels.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\EntityFramework.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.Hosting.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Owin.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\System.Web.Http.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\System.Web.Http.Owin.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\DomainModels.pdb
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\EntityFramework.xml
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.xml
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.Hosting.xml
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\System.Web.Http.xml
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\System.Web.Http.Owin.xml
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\obj\Debug\Infrastructure.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\obj\Debug\Infrastructure.pdb
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.Security.xml
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Infrastructure.dll.config
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Infrastructure.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Infrastructure.pdb
+D:\GlobalWebAuction\Infrastructure\bin\Debug\DomainModels.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\EntityFramework.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.Hosting.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.Security.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Newtonsoft.Json.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Owin.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\System.Web.Http.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\System.Web.Http.Owin.dll
+D:\GlobalWebAuction\Infrastructure\bin\Debug\DomainModels.pdb
+D:\GlobalWebAuction\Infrastructure\bin\Debug\EntityFramework.xml
+D:\GlobalWebAuction\Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.xml
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.Hosting.xml
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Microsoft.Owin.Security.xml
+D:\GlobalWebAuction\Infrastructure\bin\Debug\Newtonsoft.Json.xml
+D:\GlobalWebAuction\Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+D:\GlobalWebAuction\Infrastructure\bin\Debug\System.Web.Http.xml
+D:\GlobalWebAuction\Infrastructure\bin\Debug\System.Web.Http.Owin.xml
+D:\GlobalWebAuction\Infrastructure\obj\Debug\Infrastructure.csprojResolveAssemblyReference.cache
+D:\GlobalWebAuction\Infrastructure\obj\Debug\Infrastructure.dll
+D:\GlobalWebAuction\Infrastructure\obj\Debug\Infrastructure.pdb
