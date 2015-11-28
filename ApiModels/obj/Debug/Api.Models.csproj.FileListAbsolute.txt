@@ -1,0 +1,3 @@
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\ApiModels\bin\Debug\ApiModels.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\ApiModels\obj\Debug\ApiModels.dll
+C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\ApiModels\obj\Debug\ApiModels.pdb
