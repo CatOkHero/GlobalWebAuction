@@ -1,5 +1,0 @@
-C:\Users\Роман\Desktop\PMAAuction\DomainModels\bin\Debug\DomainModels.dll
-C:\Users\Роман\Desktop\PMAAuction\DomainModels\bin\Debug\DomainModels.pdb
-C:\Users\Роман\Desktop\PMAAuction\DomainModels\obj\Debug\DomainModels.dll
-C:\Users\Роман\Desktop\PMAAuction\DomainModels\obj\Debug\DomainModels.pdb
-C:\Users\Роман\Desktop\PMAAuction\DomainModels\obj\Debug\DomainModels.csprojResolveAssemblyReference.cache
