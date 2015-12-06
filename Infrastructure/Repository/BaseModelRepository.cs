@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using DomainModels.Abstraction;
@@ -6,26 +8,58 @@ using Infrastructure.Abstraction;
 
 namespace Infrastructure.Repository
 {
-    public class BaseModelRepository<T> : IRepository<T> where T : IBaseModel, IDisposable
+    public class BaseModelRepository<T> : IRepository<T> where T : class, IBaseModel 
     {
-        private readonly AuctionDb.AuctionDb dbContext;
+        protected AuctionDb.AuctionDb DbContext { get; set; }
+        protected DbSet<T> DbSet { get; set; }
 
-        public BaseModelRepository()
+        public BaseModelRepository(AuctionDb.AuctionDb dbContext)
         {
-            dbContext = AuctionDb.AuctionDb.Create();
+            DbContext = dbContext;
+            DbSet = DbContext.Set<T>();
+            DbContext.SaveChanges();
         }
 
         public bool Add(T entity)
         {
-            if (entity == null) throw new ArgumentNullException("BaseModelRepository" + typeof(T));
+            if (entity == null) throw new ArgumentNullException("BaseModelRepository" + typeof (T));
 
-            //dbContext.StatusModels.AddOrUpdate(( fIBaseModel)entity);
-            return false;
+            DbEntityEntry dbEntityEntry = DbContext.Entry(entity);
+            if (dbEntityEntry.State != EntityState.Detached)
+            {
+                dbEntityEntry.State = EntityState.Added;
+                return true;
+            }
+
+            try
+            {
+                DbSet.Add(entity);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
-        public bool Add(IDbAsyncEnumerable<T> entytiesAsyncEnumerable)
+
+        public bool Add(IEnumerable<T> entytiesAsyncEnumerable)
         {
-            throw new NotImplementedException();
+            foreach (var entity in entytiesAsyncEnumerable)
+            {
+                try
+                {
+                    Add(entity);
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+
+                return true;
+            }
+
+            return false;
         }
 
         public bool Delete(T entity)
@@ -38,9 +72,9 @@ namespace Infrastructure.Repository
             throw new NotImplementedException();
         }
 
-        public T GetById(Guid id)
+        public virtual T GetById(Guid id)
         {
-            throw new NotImplementedException();
+            return DbSet.Find(id);
         }
 
         public T GetByName(string name)
@@ -48,9 +82,9 @@ namespace Infrastructure.Repository
             throw new NotImplementedException();
         }
 
-        public IQueryable<T> GetAll()
+        public virtual IQueryable<T> GetAll()
         {
-            throw new NotImplementedException();
+            return DbSet;
         }
 
         public bool Update(T entity)
@@ -65,7 +99,7 @@ namespace Infrastructure.Repository
 
         public void Dispose()
         {
-            dbContext.Dispose();
+            DbContext.Dispose();
         }
     }
 }

@@ -1,26 +1,35 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
+    <meta charset="UTF-8">
     <base href="/">
-    <!--<link href="Styles/CustomSliderStyles.css" rel="stylesheet"/>-->
     <link href="Styles/MainPageStyles.css" rel="stylesheet"/>
     <link href="Styles/SlimeMenuStyles.css" rel="stylesheet"/>
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="Styles/css/bootstrap.css" rel="stylesheet"/>
+    <link href="Styles/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="Styles/css/bootstrap-theme.css" rel="stylesheet"/>
+    <link href="Styles/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link href="Styles/fonts/glyphicons-halflings-regular.eot" rel="stylesheet"/>
+    <link href="Styles/fonts/glyphicons-halflings-regular.ttf" rel="stylesheet"/>
+    <link href="Styles/fonts/glyphicons-halflings-regular.woff" rel="stylesheet"/>
     <script src="Scripts/angular/angular.js"></script>
-    <script src="Scripts/angular/angular-route.min.js"></script> 
+    <script src="Scripts/angular/angular-route.min.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
     <script src="Scripts/app/app.js"></script>
-    <script src="Scripts/Controllers/LoginController.js"></script>
-    <script src="Scripts/Controllers/SliderWrapperController.js"></script>
     <script src="Scripts/jquery/jquery-1.4.3.min.js"></script>
     <script src="Scripts/jquery/jquery.min.js"></script>
     <script src="Scripts/jquery/jquery.nivo.slider.pack.js"></script>
+    <script src="Scripts/Controllers/LoginController.js"></script>
+    <script src="Scripts/Controllers/SliderWrapperController.js"></script>
+    <script src="Scripts/Controllers/IndexController.js"></script>
+    <script src="Scripts/Controllers/RegisterController.js"></script>
+    <script src="Scripts/Directives/ValidationError.js"></script>
     <title>Web Auction</title>
 </head>
-<body ng-app="WebAuctionApp">
+<body ng-app="WebAuctionApp" ng-controller="IndexController">
     <div id="templatemo_body_wrapper">
         <div id="templatemo_wrapper">
             <div id="templatemo_header">
@@ -30,7 +39,7 @@
                     </h1>
                 </div>
                 <div class="cleaner"></div>
-            </div> <!-- END of templatemo_header -->
+            </div>
             <div id="templatemo_menubar">
                 <div class="ddsmoothmenu">
                     <ul>
@@ -43,20 +52,35 @@
                     </ul>
                     <br style="clear: left" />
                 </div> <!-- end of ddsmoothmenu -->
+
+                
                 <div id="templatemo_search">
-                    <form action="#" method="get">
-                        <input type="text" value=" " name="keyword" id="keyword" title="keyword" onfocus=" clearText(this) " onblur=" clearText(this) " class="txt_field" />
-                        <input type="submit" name="Search" value=" " alt="Search" id="searchbutton" title="Search" class="sub_btn" />
-                    </form>
+                   <form action="#" method="get">
+                    <input type="text" value=" " name="keyword" id="keyword" title="keyword" onfocus=" clearText(this) " onblur="clearText(this) " class="txt_field" />
+                    <input type="submit" name="Search" value=" " alt="Search" id="searchbutton" title="Search" class="sub_btn" />
+                </form>
                 </div>
             </div> <!-- END of templatemo_menubar -->
+
             <div id="templatemo_main">
+                <!--<button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed">CAtegories</button>
+                <hr>
+                <div uib-collapse="isCollapsed">
+                    <div class="well well-lg">Some content</div>
+                </div>-->
                 <div id="sidebar" class="float_l">
                     <div class="sidebar_box">
-                        <span class="bottom"></span>
-                        <h3>Категорії</h3>
+                        <h4 align="center">Categories</h4>
                         <div class="content">
-                            <ul class="sidebar_list">
+                            <uib-accordion close-others="oneAtATime">
+                                <uib-accordion-group heading="{{group.categoryName}}" ng-repeat="group in groups">
+	                                <div ng-repeat="subCategories in group.subCategoryModels">
+										<a href ="#" >{{subCategories.subCategoryName}}</a>
+	                                </div>
+                                </uib-accordion-group>
+                            </uib-accordion>
+
+                            <!--<ul class="sidebar_list">
                                 <li><a ng-href="#">Авто</a></li>
                                 <li class="first"><a ng-href="#">Дитячий світ</a></li>
                                 <li><a ng-href="#">Нерухомість</a></li>
@@ -66,18 +90,20 @@
                                 <li><a ng-href="#">Дім і сад</a></li>
                                 <li><a ng-href="#">Електроніка</a></li>
                                 <li><a ng-href="#">Спорт</a></li>
-                            </ul>
+                            </ul>-->
                         </div>
                     </div>
+					<button type="button" class="btn btn-default" style="width: 48%" ng-hide="isAuthorized" ng-click="login('sm')">Login</button>
+	                <button type="button" class="btn btn-default" style="width: 48%" ng-hide="isAuthorized" ng-click="register('sm')">Register</button>
+					<button type="button" class="btn btn-default" style="width: 100%" ng-show="isAuthorized" ng-click="logOut()">Log Out</button>
                 </div>
                 <div id="content" class="float_r" ng-view></div>
                 <div class="cleaner"></div>
-                </div> <!-- END of templatemo_wrapper -->
+            </div>
             <p align="center">
                 <a ng-href="#">Головна</a> | <a ng-href="#/About">Про нас</a> | <a ng-href="#/FAQ">FAQs</a>
                 Copyright © 2015 <a ng-href="#">The Обрані Company </a> | <a ng-href="#">Дизайн спижжений. Права нікуя не захищено.</a>
             </p>
-            <!--<div class="cleaner"></div>-->
         </div>
     </div>
 </body>

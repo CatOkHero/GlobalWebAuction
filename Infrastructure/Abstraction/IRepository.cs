@@ -1,14 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using DomainModels.Abstraction;
 
 namespace Infrastructure.Abstraction
 {
-    internal interface IRepository<T> where T : IBaseModel
+    internal interface IRepository<T> where T : class, IBaseModel
     {
         bool Add(T entity);
-        bool Add(IDbAsyncEnumerable<T> entytiesAsyncEnumerable);
+        bool Add(IEnumerable<T> entytiesAsyncEnumerable);
         bool Delete(T entity);
         bool Delete(IDbAsyncEnumerable<T> entytiesAsyncEnumerable);
         T GetById(Guid id);

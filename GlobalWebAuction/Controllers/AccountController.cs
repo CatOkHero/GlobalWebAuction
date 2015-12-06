@@ -3,13 +3,12 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using DomainModels.ApplicationSecurity;
 using DomainModels.User;
-using Infrastructure.AuctionDb;
 using Infrastructure.Repository;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace GlobalWebAuction.Controllers
 {
+    [AllowAnonymous]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
@@ -20,7 +19,37 @@ namespace GlobalWebAuction.Controllers
             repo = new AuctionDbRepository();
         }
 
-        // POST api/Account/Register
+        [AllowAnonymous]
+        [Route("Login")]
+        public async Task<IHttpActionResult> Login(UserModel userModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            ApplicationUser result = new ApplicationUser();
+            try
+            {
+                using (AuctionDbRepository repository = new AuctionDbRepository())
+                {
+                    result = await repository.FindUser(userModel.Name, userModel.Password);
+                }
+
+	            if (result == null)
+	            {
+		            return NotFound();
+	            }
+            }
+			catch (Exception exception)
+            {
+				return NotFound();
+            }
+
+            return Ok(result.SecurityStamp);
+        }
+
+            // POST api/Account/Register
         [AllowAnonymous]
         [Route("Register")]
         public async Task<IHttpActionResult> Register(UserModel userModel)

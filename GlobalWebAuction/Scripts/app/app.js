@@ -1,5 +1,5 @@
 ﻿/// <reference path="../angular/angular.min.js" />
-var app = angular.module('WebAuctionApp', ['ngRoute', 'ui.bootstrap']);
+var app = angular.module('WebAuctionApp', ['ngRoute', 'ui.bootstrap', 'ui.bootstrap.modal', 'ui.bootstrap.accordion']);
 
 app.config(function ($routeProvider) {
     $routeProvider

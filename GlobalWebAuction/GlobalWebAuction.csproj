@@ -40,6 +40,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ApiModels">
+      <HintPath>..\ApiModels\bin\Debug\ApiModels.dll</HintPath>
+    </Reference>
     <Reference Include="DomainModels">
       <HintPath>..\DomainModels\bin\Debug\DomainModels.dll</HintPath>
     </Reference>
@@ -179,7 +182,10 @@
     <Content Include="Index.html" />
     <Content Include="Scripts\angular\angular-animate.js" />
     <Content Include="Scripts\angular\angular-animate.min.js" />
+    <Content Include="Scripts\Controllers\IndexController.js" />
+    <Content Include="Scripts\Controllers\RegisterController.js" />
     <Content Include="Scripts\Controllers\SliderWrapperController.js" />
+    <Content Include="Scripts\Directives\ValidationError.js" />
     <Content Include="Scripts\jquery\jquery-1.4.3.min.js" />
     <Content Include="Scripts\jquery\jquery.min.js" />
     <Content Include="Scripts\jquery\jquery.nivo.slider.pack.js" />
@@ -194,7 +200,12 @@
     <Content Include="Scripts\angular\angular.min.js" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\Controllers\LoginController.js" />
+    <Content Include="Styles\css\bootstrap-theme.css" />
+    <Content Include="Styles\css\bootstrap-theme.min.css" />
+    <Content Include="Styles\css\bootstrap.css" />
+    <Content Include="Styles\css\bootstrap.min.css" />
     <Content Include="Styles\CustomSliderStyles.css" />
+    <Content Include="Styles\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Styles\MainPageStyles.css" />
     <Content Include="Styles\SlimeMenuStyles.css" />
     <Content Include="Views\About.html" />
@@ -204,6 +215,7 @@
     <Content Include="Views\Login.html" />
     <Content Include="Views\ProductDetails.html" />
     <Content Include="Views\Products.html" />
+    <Content Include="Views\Register.html" />
     <Content Include="Views\ShoppingCart.html" />
     <Content Include="Views\SlideWraper.html" />
     <Content Include="Web.config">
@@ -214,6 +226,7 @@
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
     <Compile Include="Controllers\SecuredController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\SimpleAuthorizationServerProvider.cs" />
@@ -227,6 +240,13 @@
     <Content Include="Images\product\Thumbs.db" />
     <Content Include="Images\slider\Thumbs.db" />
     <Content Include="Scripts\angular\angular-animate.min.js.map" />
+    <Content Include="Styles\css\bootstrap-theme.css.map" />
+    <Content Include="Styles\css\bootstrap-theme.min.css.map" />
+    <Content Include="Styles\css\bootstrap.css.map" />
+    <Content Include="Styles\css\bootstrap.min.css.map" />
+    <Content Include="Styles\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Styles\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Styles\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -237,7 +257,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Scripts\Directives\" />
     <Folder Include="Scripts\Services\" />
   </ItemGroup>
   <PropertyGroup>

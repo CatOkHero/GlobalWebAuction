@@ -16,9 +16,5 @@ app.controller('SliderWrapperController', [
         for (var i = 0; i < 4; i++) {
             $scope.addSlide();
         }
-
-        //$scope.$on('load', function () {
-        //    $scope.
-        //})
     }
 ]);

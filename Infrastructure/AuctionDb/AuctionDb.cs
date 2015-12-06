@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using DomainModels.Abstraction;
 using DomainModels.Bets;
 using DomainModels.Categories;
 using DomainModels.Guarantee;
@@ -35,6 +36,7 @@ namespace Infrastructure.AuctionDb
         public DbSet<CategoryModel> CategoryModels { get; set; }
         public DbSet<SubCategoryModel> SubCategoryModels { get; set; }
         public DbSet<BetModel> BetModels { get; set; }
+        //public DbSet<IBaseModel> BaseModels { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

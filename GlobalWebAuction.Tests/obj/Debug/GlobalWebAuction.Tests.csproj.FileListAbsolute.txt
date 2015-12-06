@@ -69,3 +69,5 @@ D:\GlobalWebAuction\GlobalWebAuction.Tests\bin\Debug\Microsoft.Owin.Security.OAu
 D:\GlobalWebAuction\GlobalWebAuction.Tests\bin\Debug\System.Web.Cors.dll
 D:\GlobalWebAuction\GlobalWebAuction.Tests\bin\Debug\Microsoft.Owin.Cors.xml
 D:\GlobalWebAuction\GlobalWebAuction.Tests\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+D:\GlobalWebAuction\GlobalWebAuction.Tests\bin\Debug\ApiModels.dll
+D:\GlobalWebAuction\GlobalWebAuction.Tests\bin\Debug\ApiModels.pdb

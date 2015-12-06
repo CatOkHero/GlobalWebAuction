@@ -85,3 +85,5 @@ D:\GlobalWebAuction\GlobalWebAuction\bin\Microsoft.Owin.Security.OAuth.dll
 D:\GlobalWebAuction\GlobalWebAuction\bin\System.Web.Cors.dll
 D:\GlobalWebAuction\GlobalWebAuction\bin\Microsoft.Owin.Cors.xml
 D:\GlobalWebAuction\GlobalWebAuction\bin\Microsoft.Owin.Security.OAuth.xml
+D:\GlobalWebAuction\GlobalWebAuction\bin\ApiModels.dll
+D:\GlobalWebAuction\GlobalWebAuction\bin\ApiModels.pdb
