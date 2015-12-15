@@ -1,0 +1,21 @@
+﻿<div align="center">
+	<label>{{searchElements[0].categoryName}}</label>
+</div>
+<uib-tabset vertical="true" type="pills">
+	<uib-tab ng-repeat="item in searchElements"
+	         heading="{{item.lotDetailsApiModelsApiModels.description + ' , ' + item.lotDetailsApiModelsApiModels.address}}">		
+		<br />
+		{{ item.lotDetailsApiModelsApiModels.price | currency }}
+		<br/>
+		<br/>
+		<button type="button" class="btn btn-danger" style="width: 100%" ng-click="delete(item.lotDetailsApiModelsApiModels.id)">
+			<label>Delete Item</label>
+		</button>		
+	</uib-tab>
+</uib-tabset>
+<uib-alert ng-hide="complitedAction"
+		   ng-repeat="alert in alerts"
+		   type="success"
+		   close="closeAlert($index)">
+	{{alert.msg}}
+</uib-alert>

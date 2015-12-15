@@ -15,7 +15,7 @@ namespace GlobalWebAuction.Providers
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
-
+			string userId;
             context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin", new[] { "*" });
 
             using (AuctionDbRepository repo = new AuctionDbRepository())
@@ -27,12 +27,22 @@ namespace GlobalWebAuction.Providers
                     context.SetError("invalid_grant", "The user name or password is incorrect.");
                     return;
                 }
+
+				userId = user.Id;
             }
 
-            var identity = new ClaimsIdentity(context.Options.AuthenticationType);
-            identity.AddClaim(new Claim("sub", context.UserName));
-            identity.AddClaim(new Claim("role", "user"));
+			//Use this in test propose
+			//using (UserManager<ApplicationUser> manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new AuctionDb())))
+			//{
+			//	var ident = manager.Find(context.UserName, context.Password);
+			//	var userIdentity = await manager.CreateIdentityAsync(ident, "Bearer");
+			//	context.Validated(userIdentity);
+			//}
 
+            var identity = new ClaimsIdentity(context.Options.AuthenticationType);
+			identity.AddClaim(new Claim("userIdString", userId));
+			identity.AddClaim(new Claim("sub", context.UserName));
+			identity.AddClaim(new Claim("role", "user"));
             context.Validated(identity);
         }
     }

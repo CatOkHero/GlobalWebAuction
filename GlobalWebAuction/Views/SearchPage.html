@@ -1,0 +1,9 @@
+﻿<div align="center">
+	<label>{{searchElements[0].categoryName}}</label>
+</div>
+<uib-tabset vertical="true" type="pills">
+	<uib-tab ng-repeat="item in searchElements" heading="{{item.lotDetailsApiModelsApiModels.description + ' , ' + item.lotDetailsApiModelsApiModels.address}}">
+		<br/>
+		{{ item.lotDetailsApiModelsApiModels.price | currency }}
+	</uib-tab>
+</uib-tabset>

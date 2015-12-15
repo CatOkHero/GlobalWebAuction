@@ -1,0 +1,82 @@
+﻿<script src="../Scripts/Directives/ValidationError.js"></script>
+<div class="modal-header" align="center">
+	<h3 class="modal-title">Add New Lot</h3>
+</div>
+<div class="modal-body">
+	<form class="form-group form-group-sm" name="form">
+		<pre>Lot Name {{lotName}}</pre>
+		<input class="form-control"
+		       ng-model="lotName"
+		       type="text"
+		       placeholder="Please input more than 3 characters"
+		       pattern="([A-Za-z0-9- ])+"
+		       required/>
+		<br/>
+		<pre>Lot Description {{lotDescription}}</pre>
+		<input class="form-control"
+		       type="text"
+		       ng-model="lotDescription"
+		       placeholder="Please input more than 3 characters"
+		       pattern="([A-Za-z0-9- ])+"
+		       required/>
+		<br/>
+		<pre>Lot Address {{lotAddress}}</pre>
+		<input class="form-control"
+		       type="tel"
+		       ng-model="lotAddress"
+		       placeholder="Please input more than 3 characters"
+		       pattern="([A-Za-z0-9- ])+"
+		       required/>
+		<br/>
+		<pre>Lot Price {{lotPrice | currency}}</pre>
+		<input class="form-control"
+		       type="text"
+		       ng-model="lotPrice"
+		       placeholder="Please input more than 3 characters"
+		       required/>
+		<br/>
+		<pre>Lot Category: {{selectedCategory | json}}</pre>
+		<input class="form-control"
+		       type="text"
+		       placeholder="Please select from dropdown"
+		       name="selectedCategory"
+		       ng-blur="category()"
+		       ng-model="selectedCategory"
+		       uib-typeahead="state.categoryName for state in states | filter:$viewValue | limitTo:15"
+		       required/>
+		<br/>
+		<pre>Lot SubCategory: {{selectedSubCategory | json}}</pre>
+		<input type="text"
+		       placeholder="Please select Category and then select from dropdown"
+		       ng-model="selectedSubCategory"
+		       ng-disabled="form.selectedCategory.$invalid"
+		       uib-typeahead="state.subCategoryName for state in subCategoryModels | filter:$viewValue | limitTo:15"
+		       class="form-control"
+		       required/>
+		<br/>
+		<!--<pre>Lot PriceType: {{priceType | json}}</pre>
+		<input type="text"
+		       placeholder="Please select from dropdown"
+		       ng-model="priceType"
+		       uib-typeahead="state.price for state in prices | filter:$viewValue | limitTo:15"
+		       class="form-control"/>-->
+		<pre>Lot PriceType: {{selectedStatus | json}}</pre>
+		<input type="text"
+		       placeholder="Please select from dropdown"
+		       ng-model="selectedStatus"
+		       uib-typeahead="name for name in status | filter:$viewValue | limitTo:15"
+		       class="form-control"
+			   required/>
+	</form>
+	<div class="modal-footer" align="center" style="text-align: center;">
+		<button type="submit" class="btn btn-primary" style="width: 48%" ng-disabled="form.$invalid" ng-click="ok()">OK</button>
+		<button class="btn btn-warning" style="width: 48%" ng-click="cancel()">Cancel</button>
+	</div>
+	<uib-alert ng-hide="complitedAction"
+	           ng-repeat="alert in alerts"
+	           type="success"
+	           close="closeAlert($index)">
+		{{alert.msg}}
+	</uib-alert>
+</div>
+

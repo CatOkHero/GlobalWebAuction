@@ -19,6 +19,7 @@ namespace GlobalWebAuction.Controllers
             repo = new AuctionDbRepository();
         }
 
+		//POST api/Account/Login
         [AllowAnonymous]
         [Route("Login")]
         public async Task<IHttpActionResult> Login(UserModel userModel)
@@ -28,7 +29,7 @@ namespace GlobalWebAuction.Controllers
                 return BadRequest(ModelState);
             }
 
-            ApplicationUser result = new ApplicationUser();
+            ApplicationUser result;
             try
             {
                 using (AuctionDbRepository repository = new AuctionDbRepository())
@@ -46,10 +47,10 @@ namespace GlobalWebAuction.Controllers
 				return NotFound();
             }
 
-            return Ok(result.SecurityStamp);
+            return Ok(result.Id);
         }
 
-            // POST api/Account/Register
+        // POST api/Account/Register
         [AllowAnonymous]
         [Route("Register")]
         public async Task<IHttpActionResult> Register(UserModel userModel)
@@ -59,14 +60,14 @@ namespace GlobalWebAuction.Controllers
                 return BadRequest(ModelState);
             }
 
-            IdentityResult result = new IdentityResult();
+            IdentityResult result;
             try
             {
                 result = await repo.RegisterUser(userModel);
             }
             catch (Exception exception)
             {
-                var a = exception;
+				return BadRequest(exception.Message);
             }
            
 
@@ -109,7 +110,6 @@ namespace GlobalWebAuction.Controllers
 
                 if (ModelState.IsValid)
                 {
-                    // No ModelState errors are available to send, so just return an empty BadRequest.
                     return BadRequest();
                 }
 

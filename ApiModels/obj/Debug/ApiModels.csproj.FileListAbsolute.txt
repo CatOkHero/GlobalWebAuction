@@ -2,3 +2,4 @@ D:\GlobalWebAuction\ApiModels\bin\Debug\ApiModels.dll
 D:\GlobalWebAuction\ApiModels\bin\Debug\ApiModels.pdb
 D:\GlobalWebAuction\ApiModels\obj\Debug\ApiModels.dll
 D:\GlobalWebAuction\ApiModels\obj\Debug\ApiModels.pdb
+D:\GlobalWebAuction\ApiModels\obj\Debug\ApiModels.csprojResolveAssemblyReference.cache

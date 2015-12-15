@@ -2,22 +2,25 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <base href="/">
+	<base href="/">
+	<link href="Styles/Typeahead.css" rel="stylesheet" />
     <link href="Styles/MainPageStyles.css" rel="stylesheet"/>
     <link href="Styles/SlimeMenuStyles.css" rel="stylesheet"/>
     <link href="Styles/css/bootstrap.css" rel="stylesheet"/>
     <link href="Styles/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="Styles/css/bootstrap-theme.css" rel="stylesheet"/>
-    <link href="Styles/css/bootstrap-theme.min.css" rel="stylesheet"/>
+	<link href="Styles/css/bootstrap-theme.min.css" rel="stylesheet"/>
     <link href="Styles/fonts/glyphicons-halflings-regular.eot" rel="stylesheet"/>
     <link href="Styles/fonts/glyphicons-halflings-regular.ttf" rel="stylesheet"/>
-    <link href="Styles/fonts/glyphicons-halflings-regular.woff" rel="stylesheet"/>
+	<link href="Styles/fonts/glyphicons-halflings-regular.woff" rel="stylesheet"/>
     <script src="Scripts/angular/angular.js"></script>
     <script src="Scripts/angular/angular-route.min.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
     <script src="Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
-    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+	<script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+	<script src="Scripts/angular.local.storage/angular-local-storage.js"></script>
+	<script src="Scripts/angular.local.storage/angular-local-storage.min.js"></script>
     <script src="Scripts/app/app.js"></script>
     <script src="Scripts/jquery/jquery-1.4.3.min.js"></script>
     <script src="Scripts/jquery/jquery.min.js"></script>
@@ -25,8 +28,12 @@
     <script src="Scripts/Controllers/LoginController.js"></script>
     <script src="Scripts/Controllers/SliderWrapperController.js"></script>
     <script src="Scripts/Controllers/IndexController.js"></script>
-    <script src="Scripts/Controllers/RegisterController.js"></script>
-    <script src="Scripts/Directives/ValidationError.js"></script>
+	<script src="Scripts/Controllers/RegisterController.js"></script>
+	<script src="Scripts/Controllers/ErrorPageController.js"></script>
+	<script src="Scripts/Controllers/SearchPageController.js"></script>
+	<script src="Scripts/Controllers/AddNewLotController.js"></script>
+	<script src="Scripts/Controllers/DeleteLotController.js"></script>
+	<script src="Scripts/Directives/ValidationError.js"></script>	
     <title>Web Auction</title>
 </head>
 <body ng-app="WebAuctionApp" ng-controller="IndexController">
@@ -63,40 +70,51 @@
             </div> <!-- END of templatemo_menubar -->
 
             <div id="templatemo_main">
-                <!--<button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed">CAtegories</button>
-                <hr>
-                <div uib-collapse="isCollapsed">
-                    <div class="well well-lg">Some content</div>
-                </div>-->
-                <div id="sidebar" class="float_l">
-                    <div class="sidebar_box">
-                        <h4 align="center">Categories</h4>
-                        <div class="content">
-                            <uib-accordion close-others="oneAtATime">
-                                <uib-accordion-group heading="{{group.categoryName}}" ng-repeat="group in groups">
-	                                <div ng-repeat="subCategories in group.subCategoryModels">
-										<a href ="#" >{{subCategories.subCategoryName}}</a>
-	                                </div>
-                                </uib-accordion-group>
-                            </uib-accordion>
+	            <div id="sidebar" class="float_l">
+		            <div class="sidebar_box">
+			            <h4 align="center">Categories</h4>
+			            <div class="content">
+				            <uib-accordion close-others="oneAtATime">
+					            <uib-accordion-group heading="{{group.categoryName}}" ng-repeat="group in groups" ng-click="selectCategory($index)">
+						            <div ng-repeat="subCategories in group.subCategoryModels" ng-click="searchSelected($index)">
+							            <a href="#">{{subCategories.subCategoryName}}</a>
+						            </div>
+					            </uib-accordion-group>
+				            </uib-accordion>
 
-                            <!--<ul class="sidebar_list">
-                                <li><a ng-href="#">Авто</a></li>
-                                <li class="first"><a ng-href="#">Дитячий світ</a></li>
-                                <li><a ng-href="#">Нерухомість</a></li>
-                                <li><a ng-href="#">Транспорт</a></li>
-                                <li><a ng-href="#">Робота</a></li>
-                                <li><a ng-href="#">Тварини</a></li>
-                                <li><a ng-href="#">Дім і сад</a></li>
-                                <li><a ng-href="#">Електроніка</a></li>
-                                <li><a ng-href="#">Спорт</a></li>
-                            </ul>-->
-                        </div>
-                    </div>
-					<button type="button" class="btn btn-default" style="width: 48%" ng-hide="isAuthorized" ng-click="login('sm')">Login</button>
-	                <button type="button" class="btn btn-default" style="width: 48%" ng-hide="isAuthorized" ng-click="register('sm')">Register</button>
-					<button type="button" class="btn btn-default" style="width: 100%" ng-show="isAuthorized" ng-click="logOut()">Log Out</button>
-                </div>
+				            <!--<ul class="sidebar_list">
+					            <li><a ng-href="#">Авто</a></li>
+					            <li class="first"><a ng-href="#">Дитячий світ</a></li>
+					            <li><a ng-href="#">Нерухомість</a></li>
+					            <li><a ng-href="#">Транспорт</a></li>
+					            <li><a ng-href="#">Робота</a></li>
+					            <li><a ng-href="#">Тварини</a></li>
+					            <li><a ng-href="#">Дім і сад</a></li>
+					            <li><a ng-href="#">Електроніка</a></li>
+					            <li><a ng-href="#">Спорт</a></li>
+				            </ul>-->
+			            </div>
+		            </div>
+		            <button type="button" class="btn btn-default" style="width: 48%" ng-hide="isAuthorized" ng-click="login('sm')">Login</button>
+		            <button type="button" class="btn btn-default" style="width: 48%" ng-hide="isAuthorized" ng-click="register('sm')">Register</button>
+		            <button type="button" class="btn btn-default" style="width: 100%" ng-show="isAuthorized" ng-click="logOut()">
+			            Log Out
+		            </button>
+					<hr/>
+					<div class="btn-group" uib-dropdown is-open="status.isopen" ng-show="isAuthorized" style="width: 100%">
+						<button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle style="width: 100%">
+							Lot Action<span class="caret"></span>
+						</button>
+						<ul class="uib-dropdown-menu" role="menu" aria-labelledby="single-button" style="width: 100%">
+							<li role="menuitem"><a ng-href="#/AddNewLot" ng-click="addNewLot()">Add New Lot</a></li>
+							<li role="menuitem"><a ng-href="#/SearchPage" ng-click="search()">Search</a></li>
+							<li role="menuitem"><a ng-href="#/DeleteLot" ng-click="deleteLot()">Delete Lot</a></li>
+							<li class="divider"></li>
+							<li role="menuitem"><a href="#/">Main Page</a></li>
+						</ul>
+					</div>
+	            </div>
+
                 <div id="content" class="float_r" ng-view></div>
                 <div class="cleaner"></div>
             </div>
