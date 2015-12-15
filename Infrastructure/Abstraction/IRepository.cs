@@ -11,11 +11,11 @@ namespace Infrastructure.Abstraction
         bool Add(T entity);
         bool Add(IEnumerable<T> entytiesAsyncEnumerable);
         bool Delete(T entity);
-        bool Delete(IDbAsyncEnumerable<T> entytiesAsyncEnumerable);
+		bool Delete(IEnumerable<T> entytiesAsyncEnumerable);
         T GetById(Guid id);
         T GetByName(String name);
         IQueryable<T> GetAll();
         bool Update(T entity);
-        bool Update(IDbAsyncEnumerable<T> entytiesAsyncEnumerable);
+		bool Update(IEnumerable<T> entytiesAsyncEnumerable);
     }
 }

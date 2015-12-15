@@ -23,7 +23,7 @@ namespace DomainModels.Lots
 
         public Guid Id { get; set; }
         public String Name { get; set; }
-        public virtual StatusModel StatusId { get; set; }
+        public virtual Guid StatusId { get; set; }
         public virtual ICollection<BetModel> BetId { get; set; }
         public virtual ICollection<PhotoModel> PhotoId { get; set; }
         public virtual ICollection<ShippingModel> ShippingId { get; set; }

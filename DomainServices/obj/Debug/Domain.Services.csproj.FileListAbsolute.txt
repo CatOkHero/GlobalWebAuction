@@ -17,3 +17,23 @@ C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\DomainServices\bin\Deb
 C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\DomainServices\bin\Debug\System.Web.Http.Owin.xml
 C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\DomainServices\obj\Debug\DomainServices.dll
 C:\Users\Роман\Desktop\Web Projects\GlobalWebAuction\DomainServices\obj\Debug\DomainServices.pdb
+D:\GlobalWebAuction\DomainServices\bin\Debug\DomainServices.dll
+D:\GlobalWebAuction\DomainServices\bin\Debug\DomainServices.pdb
+D:\GlobalWebAuction\DomainServices\bin\Debug\Microsoft.Owin.dll
+D:\GlobalWebAuction\DomainServices\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+D:\GlobalWebAuction\DomainServices\bin\Debug\Microsoft.Owin.Hosting.dll
+D:\GlobalWebAuction\DomainServices\bin\Debug\Newtonsoft.Json.dll
+D:\GlobalWebAuction\DomainServices\bin\Debug\Owin.dll
+D:\GlobalWebAuction\DomainServices\bin\Debug\System.Net.Http.Formatting.dll
+D:\GlobalWebAuction\DomainServices\bin\Debug\System.Web.Http.dll
+D:\GlobalWebAuction\DomainServices\bin\Debug\System.Web.Http.Owin.dll
+D:\GlobalWebAuction\DomainServices\bin\Debug\Microsoft.Owin.xml
+D:\GlobalWebAuction\DomainServices\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
+D:\GlobalWebAuction\DomainServices\bin\Debug\Microsoft.Owin.Hosting.xml
+D:\GlobalWebAuction\DomainServices\bin\Debug\Newtonsoft.Json.xml
+D:\GlobalWebAuction\DomainServices\bin\Debug\System.Net.Http.Formatting.xml
+D:\GlobalWebAuction\DomainServices\bin\Debug\System.Web.Http.xml
+D:\GlobalWebAuction\DomainServices\bin\Debug\System.Web.Http.Owin.xml
+D:\GlobalWebAuction\DomainServices\obj\Debug\Domain.Services.csprojResolveAssemblyReference.cache
+D:\GlobalWebAuction\DomainServices\obj\Debug\DomainServices.dll
+D:\GlobalWebAuction\DomainServices\obj\Debug\DomainServices.pdb
