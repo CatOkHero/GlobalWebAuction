@@ -112,7 +112,7 @@ namespace GlobalWebAuction.Controllers.CategoryController
 							//		LotDetailsApiModelsApiModels = lotDeatailsApi
 							//	});
 
-							if (category.Id == lotDetailsModel.CategoryId)
+							if (category.Id == lotDetailsModel.CategoryId.Id)
 							{
 								models.Add(new CategoryApiModel()
 								{

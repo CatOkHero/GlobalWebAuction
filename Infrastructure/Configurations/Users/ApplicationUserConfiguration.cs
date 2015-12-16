@@ -9,7 +9,7 @@ namespace Infrastructure.Configurations.Users
         {
             //Relationship many to one
             HasMany(u => u.BetId)
-                .WithOptional(b => b.UserId);
+                .WithRequired(b => b.UserId);
             HasMany(u => u.PhotoId)
                 .WithOptional(p => p.UserId);
             HasMany(u => u.LotlId)

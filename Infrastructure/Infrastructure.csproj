@@ -99,9 +99,12 @@
     <Compile Include="AuctionDb\AuctionDb.cs" />
     <Compile Include="Configurations\Bets\BetsConfigurations.cs" />
     <Compile Include="Configurations\Categories\CategoriesConfigurations.cs" />
+    <Compile Include="Configurations\Guarantee\GuaranteeConfiguration.cs" />
     <Compile Include="Configurations\Lots\LotsConfigurations.cs" />
     <Compile Include="Configurations\Lots\LotsDetailsConfigurations.cs" />
     <Compile Include="Configurations\Photo\PhotoConfigurations.cs" />
+    <Compile Include="Configurations\Shipping\ShippingConfiguration.cs" />
+    <Compile Include="Configurations\Status\StatusConfiguration.cs" />
     <Compile Include="Configurations\Users\ApplicationUserConfiguration.cs" />
     <Compile Include="Migrations\ConfigurationManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

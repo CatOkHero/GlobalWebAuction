@@ -12,6 +12,14 @@ namespace Infrastructure.Configurations.Bets
             //Table & Columns mapping 
             //HasRequired(b => b.LotId)
             //    .WithRequiredDependent(l =)
+
+	        HasRequired(t => t.LotId)
+		        .WithMany(l => l.BetId)
+				.Map(m => m.MapKey("LotId"));
+
+			HasRequired(t => t.UserId)
+				.WithMany(l => l.BetId)
+				.Map(m => m.MapKey("UserId"));
         }
     }
 }

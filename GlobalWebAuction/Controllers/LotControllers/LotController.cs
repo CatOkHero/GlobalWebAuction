@@ -65,17 +65,7 @@ namespace GlobalWebAuction.Controllers.LotControllers
 					{
 						Id = Guid.NewGuid(),
 						ApplicationUsersId = user,
-						LotDetailsId = new List<LotDetailsModel>()
-						{
-							new LotDetailsModel()
-							{
-								Id = Guid.NewGuid(),
-								Adress = lotModel.Address,
-								CategoryId = categoriesList.Id,
-								Description = lotModel.Description,
-								Price = Convert.ToDouble(lotModel.Price)
-							}
-						},
+						LotDetailsId = new LotDetailsModel(),
 						Name = lotModel.Name,
 						StatusId = statusModel.Id
 					};

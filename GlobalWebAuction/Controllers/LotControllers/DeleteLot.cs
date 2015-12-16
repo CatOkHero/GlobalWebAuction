@@ -23,11 +23,9 @@ namespace GlobalWebAuction.Controllers.LotControllers
 				{
 					var lots =
 						lotRepository.GetAll()
-							.Select(lot => lot.LotDetailsId.Where(lotDetails => lotDetails.Id.ToString() == lotDetailsId.ToString())).ToList();
+							.Where(lot => lot.LotDetailsId.ToString() == lotDetailsId.ToString()).ToList();
 
-					var concreteLot = lots.First(filter => filter.Count() != 0).Select(el => el.LotId).ToList().FirstOrDefault();
-
-					if (lotRepository.Delete(concreteLot.ToList()))
+					if (lotRepository.Delete(lots))
 					{
 						deleted = true;
 					}

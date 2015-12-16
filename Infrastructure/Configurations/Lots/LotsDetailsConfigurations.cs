@@ -9,20 +9,29 @@ namespace Infrastructure.Configurations.Lots
             //Primary key
             HasKey(key => key.Id);
 
-            //Table & columns relationship
-            //Many to many
-            HasMany(ld => ld.CategoryId)
-                .WithMany(ctg => ctg.LotDetailsId);
+	        HasRequired(t => t.LotId)
+		        .WithRequiredPrincipal(lot => lot.LotDetailsId);
 
-            //One to many
-            HasOptional(ld => ld.GuaranteeId)
-                .WithMany(g => g.LotDetailsId);
+	        HasOptional(t => t.GuaranteeId)
+		        .WithMany(g => g.LotDetailsId)
+				.Map(m => m.MapKey("GuaranteeId"));
+	        HasOptional(t => t.CategoryId)
+		        .WithMany(c => c.LotDetailsId)
+				.Map(m => m.MapKey("CategoryId"));
+	        //Table & columns relationship
+	        //Many to many
+	        //HasMany(ld => ld.CategoryId)
+	        //	.WithMany(ctg => ctg.LotDetailsId);
 
-            //Required one to many/one
-            //HasMany(ld => ld.UserId)
-            //    .WithMany(u => u.LotDetailId);
-            HasMany(ld => ld.LotId)
-                .WithMany(l => l.LotDetailsId);
+	        ////One to many
+	        //HasOptional(ld => ld.GuaranteeId)
+	        //	.WithMany(g => g.LotDetailsId);
+
+	        ////Required one to many/one
+	        ////HasMany(ld => ld.UserId)
+	        ////    .WithMany(u => u.LotDetailId);
+	        //HasMany(ld => ld.LotId)
+	        //	.WithMany(l => l.LotDetailsId);
         }
     }
 }

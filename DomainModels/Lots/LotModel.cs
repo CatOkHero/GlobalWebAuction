@@ -15,9 +15,9 @@ namespace DomainModels.Lots
         {
             BetId = new List<BetModel>();
             PhotoId = new List<PhotoModel>();
-            ShippingId = new List<ShippingModel>();
-            LotDetailsId = new List<LotDetailsModel>();
-            LotTypePriceId = new List<LotTypePriceModel>();
+			//ShippingId = new List<ShippingModel>();
+			//LotDetailsId = new List<LotDetailsModel>();
+			//LotTypePriceId = new List<LotTypePriceModel>();
             ApplicationUsersId = new List<ApplicationUser>();
         }
 
@@ -26,9 +26,9 @@ namespace DomainModels.Lots
         public virtual Guid StatusId { get; set; }
         public virtual ICollection<BetModel> BetId { get; set; }
         public virtual ICollection<PhotoModel> PhotoId { get; set; }
-        public virtual ICollection<ShippingModel> ShippingId { get; set; }
-        public virtual ICollection<LotDetailsModel> LotDetailsId { get; set; }
-        public virtual ICollection<LotTypePriceModel> LotTypePriceId { get; set; }
+        public virtual ShippingModel ShippingId { get; set; }
+		public virtual LotDetailsModel LotDetailsId { get; set; }
+		public virtual LotTypePriceModel LotTypePriceId { get; set; }
         public virtual ICollection<ApplicationUser> ApplicationUsersId { get; set; }
     }
 }

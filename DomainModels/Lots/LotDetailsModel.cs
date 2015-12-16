@@ -12,7 +12,7 @@ namespace DomainModels.Lots
         public LotDetailsModel()
         {
             //UserId = new List<ApplicationUser>();
-            LotId = new List<LotModel>();
+			//LotId = new List<LotModel>();
 			//CategoryId = new List<CategoryModel>();
         }
 
@@ -22,8 +22,8 @@ namespace DomainModels.Lots
         public String Description { get; set; }
         public Int16 Quantity { get; set; }
         //public virtual ICollection<ApplicationUser> UserId { get; set; }
-        public virtual GuaranteeModel GuaranteeId { get; set; }
-        public virtual ICollection<LotModel> LotId { get; set; }
-		public virtual Guid CategoryId { get; set; }
+		public virtual GuaranteeModel GuaranteeId { get; set; }
+        public virtual LotModel LotId { get; set; }
+		public virtual CategoryModel CategoryId { get; set; }
     }
 }

@@ -14,12 +14,15 @@ using Infrastructure.Configurations.Photo;
 using Infrastructure.Configurations.Users;
 using Microsoft.AspNet.Identity.EntityFramework;
 using DomainModels.ApplicationSecurity;
+using Infrastructure.Configurations.Guarantee;
+using Infrastructure.Configurations.Shipping;
+using Infrastructure.Configurations.Status;
 
 namespace Infrastructure.AuctionDb
 {
     public class AuctionDb : IdentityDbContext<ApplicationUser>
     {
-        public AuctionDb() : base("name=WebAuctionDataBase") { }
+        public AuctionDb() : base("name=WebAuctionDataBase4") { }
 
         public static AuctionDb Create()
         {
@@ -46,6 +49,9 @@ namespace Infrastructure.AuctionDb
             modelBuilder.Configurations.Add(new LotsDetailsConfigurations());
             modelBuilder.Configurations.Add(new PhotoConfigurations());
             modelBuilder.Configurations.Add(new ApplicationUserConfiguration());
+	        modelBuilder.Configurations.Add(new ShippingConfiguration());
+			modelBuilder.Configurations.Add(new StatusConfiguration());
+			modelBuilder.Configurations.Add(new GuaranteeConfiguration());
 
             modelBuilder.Entity<IdentityUserLogin>().HasKey<string>(l => l.UserId);
             modelBuilder.Entity<IdentityRole>().HasKey<string>(r => r.Id);
